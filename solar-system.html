@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Solar System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <!-- importing swiper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/75f171a525.js" crossorigin="anonymous"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <header id="header-container"></header>
+
+    <main class="flex flex-grow mt-4 flex-col">
+        <div class="solar-system-start bg-[#3E536F] flex w-full h-[1000px] relative">
+            <div class="w-[60px]">
+                <h1 class="m-7 mr-[15px] break-all">SOLAR</h1>
+            </div>
+            <div class="w-[60px] m-[15px] mt-[132px]">
+                <h1 class="m-7 break-all">SYSTEM</h1>
+            </div>
+
+            <div class="flex flex-1 h-full justify-between items-center">
+                <div class="flex justify-start items-center h-full ml-28">
+                    <video class="circular-mask w-fit h-fit" autoplay loop muted>
+                        <source src="public/images/solarSystem/SolarSystemAnimation_2.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="welcome-message flex flex-col bg-[#1B2532] w-5/12 h-fit py-[50px] px-[42px] rounded-l-[40px] ml-[5rem]">
+                    <h5 class="mb-[30px]">Welcome to the Solar System!</h5>
+                    <p>We’re about to take a trip through a bustling cosmic neighborhood filled with eight planets, dozens of moons, 
+                        asteroids, comets, and one shining star: the Sun! From Mercury’s heat to Neptune’s icy edge, every world has 
+                        its own amazing story to explore.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="choose-planet bg-[#3E536F] flex w-screen h-[1000px] relative justify-end items-center">
+            <div class="w-[1256px] h-[562px] mb-[25rem]">
+                <h2 class="mb-[30px]">CHOOSE A PLANET TO EXPLORE:</h2>
+                <div class="planets-container size-full bg-[#EEDDC3] rounded-l-[40px] flex justify-center items-center">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-end items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Sun.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Sun_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Sun_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Sun</strong></p>
+                            <p class="text-[#1B2532] text-center">432,000mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Mercury.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Mercury_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Mercury_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Mercury</strong></p>
+                            <p class="text-[#1B2532] text-center">1,516mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Jupiter.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Jupiter_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Jupiter_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Jupiter</strong></p>
+                            <p class="text-[#1B2532] text-center">43,441mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Uranus.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Uranus_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Uranus_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Uranus</strong></p>
+                            <p class="text-[#1B2532] text-center">15,759mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Mars.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Mars_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Mars_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Mars</strong></p>
+                            <p class="text-[#1B2532] text-center">2,106mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Saturn.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Saturn_hover2.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Saturn_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Saturn</strong></p>
+                            <p class="text-[#1B2532] text-center">36,184mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Earth.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Earth_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Earth_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Earth</strong></p>
+                            <p class="text-[#1B2532] text-center">3,959mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Venus.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Venus_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Venus_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Venus</strong></p>
+                            <p class="text-[#1B2532] text-center">3,760mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Neptune.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Neptune_hover2.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Neptune_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Neptune</strong></p>
+                            <p class="text-[#1B2532] text-center">15,299mi</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                                <div class="image-swap">
+                                    <img class="default" src="public/images/solarSystem/Pluto.svg" alt="">
+                                    <img class="hover" src="public/images/solarSystem/planet_hovers/Pluto_hover.svg" alt="">
+                                </div>
+                                <img src="public/images/solarSystem/Pluto_line.svg" alt="">
+                            </div>
+                            <p class="text-[#1B2532] text-center"><strong>Pluto</strong></p>
+                            <p class="text-[#1B2532] text-center">738mi</p>
+                        </div>
+                    </div>
+
+                    </div>
+                    <button class="custom-prev"><img src="public/images/solarSystem/leftIcon.svg" alt=""></button>
+                    <button class="custom-next"><img src="public/images/solarSystem/rightIcon.svg" alt=""></button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#3E536F] flex w-screen h-[500px] relative justify-start items-center">
+            <div class="w-[1307px] h-[228px] bg-[#95A2B4] rounded-r-[40px] flex justify-end items-center px-[50px] py-[42px] gap-10 mb-[30rem]">
+                <div class="flex flex-col">
+                    <h1 class="text-center text-[#1B2532]">DISCOVERY</h1><br>
+                    <h1 class="text-center text-[#1B2532]">TIMELINE</h1>
+                </div>
+                <div class="flex flex-col gap-5 justify-center">
+                    <p class="max-w-[500px] text-[#1B2532]">Travel through time to read the story of our solar system’s discovery.</p>
+                    <button class="size-fit">VIEW</button>
+                </div>
+            </div>
+            <div>
+                <img src="public/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div>
+        </div>
+
+        <div class="w-screen h-[1050px] bg-[#1B2532] flex flex-col mt-0 relative">
+            <h2 class="text-center mt-[40px]">PLANET GALLERY</h2>
+            <div class="image-gallery flex justify-center">
+                <div class="gallery-photo flex size-fit image-swap">
+                    <img src="public/images/solarSystem/jupiter.png" alt="" class="default circular-mask">
+                    <img src="public/images/solarSystem/jupiter_hover.png" alt="" class="hover circular-mask">
+                </div>
+                <div class="gallery-photo flex size-fit image-swap">
+                    <img src="public/images/galleryPhoto_2.png" alt="" class="default circular-mask">
+                    <img src="public/images/galleryPhoto_2_hover.png" alt="" class="hover circular-mask">
+                </div>
+                <div class="gallery-photo flex size-fit image-swap">
+                        <img src="public/images/solarSystem/mars.png" alt="" class="default circular-mask">
+                        <img src="public/images/solarSystem/mars_hover.png" alt="" class="hover circular-mask">
+                </div>
+            </div>
+            <div class="gallery-caption">
+                <p>Get a front-row view of the Solar System with striking images that reveal planets, moons, and asteroids in dazzling detail.</p>
+                <button class="whitespace-nowrap">FULL GALLERY</button>
+            </div>
+            <div class="footer-wave">
+                <img src="public/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div>
+        </div>
+    </main>
+    
+    <footer id="footer-container"></footer>
+
+    <script>
+      $(function() {
+        $("#header-container").load("header-2.html");
+        $("#footer-container").load("footer.html");
+      });
+
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        // default values
+        slidesPerView: 4,
+        spaceBetween: 5,
+        // centeredSlides: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+        },
+
+      });
+    </script>
+
+</body>
+</html>

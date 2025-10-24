@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <header id="header-container"></header>
+
+    <main class="flex flex-grow mt-4 flex-col">
+      <div class="hero bg-[url('public/images/galaxyBW41.png')] flex bg-cover bg-center w-screen h-[1000px] max-lg:h-[800px] max-md:h-[600px] bg-no-repeat relative">
+        <div class="w-[60px]">
+          <h1 class="m-7 break-all">COSMOS</h1>
+        </div>
+        <div class="flex flex-col absolute justify-center items-center w-screen h-[1000px] max-lg:h-[800px] max-md:h-[600px]">
+          <img src="public/images/icons/rocket.svg" alt="" class="mb-[10px] max-lg:size-18 max-md:size-16">
+          <h3 class="w-[377px] h-[230px] text-center">EXPLORE SPACE (NO SPACESHIP NEEDED)</h3>
+        </div>
+        <img src="public/images/transition_lightBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute origin-bottom-left bottom-0">
+      </div>
+
+      <div class="solar-system w-screen h-[888px] max-lg:h-[650px] max-md:h-[500px] bg-[#95A2B4] flex relative items-center pl-[150px] max-lg:pl-[80px] max-md:pl-[40px] justify-between">
+        <div class="left mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem]">
+          <img src="/images/solarSystemIllustration_2.png" alt="" class="circular-mask">
+        </div>
+        <div class="flex w-[50rem] mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem]">
+          <div class="right flex flex-col ml-[92px] max-md:ml-[50px]">
+            <h2 class="text-[#1B2532] mb-[30px] max-lg:mb-[20px] max-md:mb-[15px]">SOLAR SYSTEM</h2>
+            <div class="solar-system-info bg-[#3E536F] p-10 max-md:p-8 rounded-l-[40px]">
+              <p>Prepare for a journey through the Solar System, where every planet has its own story, mysteries, and incredible natural wonders to uncover.</p>
+              <a href="solar-system.html"><button class="mt-8 max-md:mt-4">BLASTOFF!</button></a>
+            </div>
+          </div>
+        </div>
+        <img src="public/images/transition_midBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+      </div>
+
+      <div class="star-stories w-screen h-[888px] max-lg:h-[650px] max-md:h-[500px] bg-[#3E536F] flex relative items-center justify-between left-0">
+        <div class="flex justify-end w-[50rem] mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem] pr-[92px] max-md:pr-[40px]">
+          <div class="left flex flex-col">
+            <h2 class="mb-[30px] max-md:mb-[15px] text-right">STAR STORIES</h2>
+            <div class="star-stories-info bg-[#D8A966] p-10 max-md:p-8 rounded-r-[40px]">
+              <p class="text-[#1B2532] text-right">Embark on an adventure among the stars, where constellations reveal both scientific wonders and the timeless legends behind their shapes.</p>
+              <div class="flex justify-end"><a href="star-stories.html"><button class="mt-8">BLASTOFF!</button></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="right mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem] pr-[150px] max-lg:pr-[80px] max-md:pr-[40px]">
+          <img src="public/images/starStoriesIllustration_1.png" alt="" class="circular-mask">
+        </div>
+        <img src="public/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+      </div>
+
+      <div class="w-screen h-[711px] max-lg:h-[500px] bg-[#1B2532]">
+        <h2 class="text-center mt-[0px]">STELLAR GALLERY</h2>
+        <div class="image-gallery flex justify-center">
+          <div class="gallery-photo flex size-fit image-swap">
+            <img src="public/images/galleryPhoto_1.png" alt="" class="default circular-mask">
+            <img src="public/images/galleryPhoto_1_hover.png" alt="" class="hover circular-mask">
+          </div>
+          <div class="gallery-photo flex size-fit image-swap">
+            <img src="public/images/galleryPhoto_2.png" alt="" class="default circular-mask">
+            <img src="public/images/galleryPhoto_2_hover.png" alt="" class="hover circular-mask">
+          </div>
+          <div class="gallery-photo flex size-fit image-swap">
+            <img src="public/images/galleryPhoto_3.png" alt="" class="default circular-mask">
+            <img src="public/images/galleryPhoto_3_hover.png" alt="" class="hover circular-mask">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <p>Explore our cosmic gallery and experience the Solar System and beyond through vivid images of stars, planets, and distant worlds.</p>
+          <a href="stellar-gallery.html"><button class="whitespace-nowrap">FULL GALLERY</button></a>
+        </div>
+      </div>
+      
+      <div class="newsletter-frame-full relative">
+        <div class="newsletter w-screen h-[1270px] max-lg:h-[1000px] bg-[#1B2532] flex relative items-center justify-between left-0 pb-[15rem]">
+          <div class="constellations constellations-left">
+            <img src="public/images/constellationsLeft.png" alt="">
+          </div>
+          <div class="newsletter-container relative flex items-center justify-center">
+            <img src="public/images/newsletterImage.png" alt="">
+            <div class="newsletter-info w-[85%] h-[75%] @max-[920px]:w-[95%] @max-[920px]:h-auto max-md:w-[100%] max-:h-auto aspect-auto bg-[#FEEEE0] rounded-[40px] absolute
+            mt-[25rem] ml-[5rem] z-10 flex justify-center px-[2.5rem] max-md:p-[2.25rem]">
+              <div class="flex flex-col gap-[25px] max-md:gap-[10px] justify-center">
+                <h3 class="text-[#1B2532] text-center">JOIN OUR NEWSLETTER FOR THE LATEST SPACE NEWS!</h3>
+                <p class="text-[18px] text-[#1B2532] text-center">Stay up to date with our space newsletter, 
+                bringing you the latest discoveries, missions, and cosmic wonders from across the universe.</p>
+                <button class="size-fit self-center border-[#EEDDC3]">SIGN UP</button>
+              </div>
+            </div>
+          </div>
+          <div class="constellations constellations-right">
+            <img src="public/images/constellationsRight.png" alt="">
+          </div>
+        </div>
+        <div class="footer-wave">
+          <img src="public/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script>
+      $(function() {
+        $("#header-container").load("header.html"); // adjust path
+        $("#footer-container").load("footer.html"); // adjust path
+      });
+    </script>
+
+  </body>
+</html>

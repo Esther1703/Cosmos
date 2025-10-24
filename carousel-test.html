@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Carousel Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <header id="header-container"></header>
+
+    <main class="flex flex-grow mt-4 bg-[#95A2B4] items-center">
+        <section class="carousel-container">
+            <button class="carousel-arrow arrow-button" id="slide-carousel-prev">
+                &#8249;
+            </button>
+
+            <button class="carousel-arrow arrow-button" id="slide-carousel-next">
+                &#8250;
+            </button>
+
+            <ul class="carousel-track flex flex-row items-end">
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-end items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Sun.svg" alt="">
+                        <img src="public/images/solarSystem/Sun_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Sun</strong></p>
+                    <p class="text-[#1B2532] text-center">432,000mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Mercury.svg" alt="">
+                        <img src="public/images/solarSystem/Mercury_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Mercury</strong></p>
+                    <p class="text-[#1B2532] text-center">1,516mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Jupiter.svg" alt="">
+                        <img src="public/images/solarSystem/Jupiter_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Jupiter</strong></p>
+                    <p class="text-[#1B2532] text-center">43,441mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Uranus.svg" alt="">
+                        <img src="public/images/solarSystem/Uranus_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Uranus</strong></p>
+                    <p class="text-[#1B2532] text-center">15,759mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Mars.svg" alt="">
+                        <img src="public/images/solarSystem/Mars_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Mars</strong></p>
+                    <p class="text-[#1B2532] text-center">2,106mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Saturn.svg" alt="">
+                        <img src="public/images/solarSystem/Saturn_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Saturn</strong></p>
+                    <p class="text-[#1B2532] text-center">36,184mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Earth.svg" alt="">
+                        <img src="public/images/solarSystem/Earth_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Earth</strong></p>
+                    <p class="text-[#1B2532] text-center">3,959mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Venus.svg" alt="">
+                        <img src="public/images/solarSystem/Venus_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Venus</strong></p>
+                    <p class="text-[#1B2532] text-center">3,760mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Neptune.svg" alt="">
+                        <img src="public/images/solarSystem/Neptune_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Neptune</strong></p>
+                    <p class="text-[#1B2532] text-center">15,299mi</p>
+                </li>
+                <li class="carousel-item">
+                    <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
+                        <img src="public/images/solarSystem/Pluto.svg" alt="">
+                        <img src="public/images/solarSystem/Pluto_line.svg" alt="">
+                    </div>
+                    <p class="text-[#1B2532] text-center"><strong>Pluto</strong></p>
+                    <p class="text-[#1B2532] text-center">738mi</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer id="footer-container"></footer>
+
+    <script>
+      $(function() {
+        $("#header-container").load("header-2.html"); // adjust path
+        $("#footer-container").load("footer.html"); // adjust path
+      });
+    </script>
+
+</body>
+</html>

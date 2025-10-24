@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <!-- importing photoswipe css  -->
+     <!-- <link rel="stylesheet" href="node_modules/photoswipe/src/photoswipe.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <header id="header-container"></header>
+
+    <main class="flex flex-grow mt-4 flex-col">
+        <div class="solar-system-start bg-[#1B2532] flex w-screen h-fit relative">
+            <div class="w-[60px]">
+                <h1 class="m-7 mr-[15px] break-all">STELLAR</h1>
+            </div>
+            <div class="w-[60px] m-[15px] mt-[132px]">
+                <h1 class="m-7 break-all">GALLERY</h1>
+            </div>
+            <div class="flex flex-col w-fit relative items-end justify-between">
+                <div class="stellar-gallery-caption">
+                    <h5>Filters:</h5>
+                    <button class="filter-button">STARS</button>
+                    <button class="filter-button">PLANETS</button>
+                    <button class="filter-button">MOON</button>
+                    <button class="clear-button">CLEAR</button>
+                </div>
+            <div class="grid w-full justify-center">
+                <div class="pswp-gallery gallery" id="stellar-gallery">
+                    <a href="/images/stellarGallery/heroImage_test.png" 
+                        data-pswp-width="1440" 
+                        data-pswp-height="944">
+                        <img src="/images/stellarGallery/heroImage_test_thumbnail2.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/astronomy-3225630_1280.jpg" 
+                        data-pswp-width="909" 
+                        data-pswp-height="1280">
+                        <img src="/images/stellarGallery/astronomy-3225630_1280_thumbnail2.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/planet-earth-background.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="843">
+                        <img src="/images/stellarGallery/planet-earth-background_thumbnail2.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/low-angle-view-firework-display-night.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="720">
+                        <img src="images/stellarGallery/low-angle-view-firework-display-night_thumbnail2.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/low-angle-view-moon-against-sky.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="883">
+                        <img src="public/images/stellarGallery/low-angle-view-moon-against-sky_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/elephant-trunk-nebula.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="1024">
+                        <img src="/images/stellarGallery/elephant-trunk-nebula._thumbnailpng.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/galaxy-11098_1280.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="800">
+                        <img src="/images/stellarGallery/galaxy-11098_1280_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/halfMoon.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="960">
+                        <img src="/images/stellarGallery/halfMoon_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/idyllic-shot-earth.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="720">
+                        <img src="/images/stellarGallery/idyllic-shot-earth_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/spiral-galaxy-ngc-2997.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="858">
+                        <img src="/images/stellarGallery/spiral-galaxy-ngc-2997_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/freepik__background__55495.png" 
+                        data-pswp-width="1248" 
+                        data-pswp-height="832">
+                        <img src="/images/stellarGallery/freepik__background__55495_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/low-angle-view-star-field-night.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="852">
+                        <img src="/images/stellarGallery/low-angle-view-star-field-night_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/star-trails-8306233_1280.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="648">
+                        <img src="/images/stellarGallery/star-trails-8306233_1280_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/star-cluster-constellation-constellation.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="853">
+                        <img src="/images/stellarGallery/star-cluster-constellation-constellation_thumbnail.png" alt="" />
+                    </a>
+                    <a href="/images/stellarGallery/colorful-space-background-elements-this-image-furnished-by-nasa.jpg" 
+                        data-pswp-width="1280" 
+                        data-pswp-height="1280">
+                        <img src="/images/stellarGallery/colorful-space-background-elements-this-image-furnished-by-nasa_thumbnail.png" alt="" />
+                    </a>
+                </div>
+            </div>
+            </div>
+
+    </main>
+    
+    <footer id="footer-container"></footer>
+
+    <script>
+      $(function() {
+        $("#header-container").load("header-2.html"); // adjust path
+        $("#footer-container").load("footer.html"); // adjust path
+      });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.filter-button');
+            const clearButton = document.querySelector('.clear-button');
+
+            for (let button of buttons) {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('active');
+                });
+            };
+
+            if (clearButton) {
+                clearButton.addEventListener('click', () => {
+                    buttons.forEach(button => {
+                        button.classList.remove('active');
+                    });
+                });
+            };
+        });
+
+    </script>
+
+</body>
+</html>

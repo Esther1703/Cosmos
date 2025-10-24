@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Carousel Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <header id="header-container"></header>
+
+    <main class="flex flex-grow mt-4">
+        <section class="slider-wrapper w-screen">
+            <button class="slide-arrow arrow-button" id="slide-arrow-prev">
+                &#8249;
+            </button>
+
+            <button class="slide-arrow arrow-button" id="slide-arrow-next">
+                &#8250;
+            </button>
+
+            <ul class="slides-container w-full" id="slides-container">
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer id="footer-container"></footer>
+
+    <script>
+        const slidesContainer = document.getElementById('slides-container');
+        const slide = document.querySelector(".slide");
+        const prevButton = document.getElementById("slide-arrow-prev");
+        const nextButton = document.getElementById('slide-arrow-next');
+
+        nextButton.addEventListener("click", (event) => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft += slideWidth;
+        })
+
+        prevButton.addEventListener("click", (event) => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft -= slideWidth;
+        })
+
+      $(function() {
+        $("#header-container").load("header-2.html"); // adjust path
+        $("#footer-container").load("footer.html"); // adjust path
+      });
+
+      
+    </script>
+
+</body>
+</html>

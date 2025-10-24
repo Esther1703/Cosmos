@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <header id="header-container"></header>
+
+    <main class="flex flex-grow mt-4 flex-col">
+        <div class="hero bg-[url('public/images/about/galaxyBW2.png')] flex bg-cover bg-center w-screen h-[744px] bg-no-repeat relative">
+            <div class="w-[60px]">
+                <h1 class="m-7 break-all">ABOUT</h1>
+            </div>
+            <div class="flex flex-col absolute justify-center items-center w-screen h-full pb-36">
+                <h3 class="w-[486px] h-[128px] text-center">THE BIRTH OF COSMOS (THE COMPANY, NOT THE UNIVERSE)</h3>
+            </div>
+            <img src="public/images/transition_lightBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute origin-bottom-left bottom-0">
+        </div>
+
+        <div class="our-story w-screen h-[900px] bg-[#95A2B4] flex relative items-center pl-[150px]">
+            <div class="left mb-[15rem] ml-[3rem] mt-[3rem] bg-[#3E536F] px-10 py-10 rounded-l-[40px] flex flex-row items-center justify-between">
+                <div class="size-7/12 mr-10">
+                    <h2 class="mb-[30px]">OUR STORY</h2>
+                    <p>Cosmos was born out of one simple idea: learning about space shouldn’t feel like rocket science 
+                    (even when it actually is). A handful of space-loving nerds came together [X years ago] to create 
+                    a place where anyone could discover planets, stars, and galaxies in a fun, accessible way. 
+                    <br><br>
+                    Over time, our little project grew into a thriving hub for cosmic news, guides, and stories that make 
+                    the universe feel like your backyard. Today, our team still runs on equal parts curiosity, coffee, 
+                    and stardust. And we’re just getting started—the universe is a big place, after all!</p>
+                </div>
+                <div>
+                    <img class="circular-mask" src="public/images/about/ourStoryIllustration_4.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="our-team w-screen h-[900px] bg-[#95A2B4] flex relative items-center justify-start left-0 pr-[150px]">
+            <div class="left mb-[30rem] bg-[#1B2532] px-10 py-10 rounded-r-[40px] flex items-center">
+                <div class="size-7/12 mr-10">
+                    <h2 class="mb-[30px]">OUR TEAM</h2>
+                    <p>The Cosmos team is a mix of space nerds, science buffs, storytellers, and a few people who just really love 
+                        staring at the night sky. Some of us are writers, some are educators, and some are designers—but all of us 
+                        share the same mission: to make the wonders of outer space fun and accessible for everyone. We’re the kind 
+                        of crew that gets equally excited about the latest rocket launch, a cool new image from a space telescope, 
+                        or spotting a constellation on a clear night. Together, we collaborate with plenty of curiosity and humor 
+                        to bring the universe a little closer, one story (and one star) at a time.</p>
+                </div>
+                <div>
+                    <img class="circular-mask" src="public/images/about/ourTeanIllustration_1.png" alt="">
+                </div>
+            </div>
+            <div>
+                <img src="public/images/transition_midBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div>
+        </div>
+
+        <div class="our-goals w-screen h-[900px] bg-[#3E536F] flex flex-col relative items-center justify-center">
+            <div class="flex flex-col items-center justify-center mb-[22rem]">
+                <h2 class="mb-[30px]">OUR GOALS</h2>
+                    <div class="image-gallery">
+                        <div class="w-[318px] h-[318px] rounded-full bg-[#FEEEE0] flex flex-col items-center justify-center gap-y-[5px] goals-circles">
+                            <span class="initial flex flex-col items-center">
+                                <img src="public/images/about/globe-stand-solid-full.png" alt="">
+                                <h5 class="text-[#1B2532]">LEARN</h5>
+                            </span>
+                            <span class="on-hover">
+                                <h5 class="text-[#1B2532]">LEARN</h5>
+                                <p class="text-[#1B2532] text-center px-5">Teaching the history and science of space</p>
+                            </span>
+                        </div>
+                        <div class="w-[318px] h-[318px] rounded-full bg-[#FEEEE0] flex flex-col items-center justify-center gap-y-[5px] goals-circles">
+                            <span class="initial flex flex-col items-center">
+                                <img src="public/images/about/rocket-launch-solid-full.png" alt="">
+                                <h5 class="text-[#1B2532]">EXPLORE</h5>
+                            </span>
+                            <span class="on-hover">
+                                <h5 class="text-[#1B2532]">EXPLORE</h5>
+                                <p class="text-[#1B2532] text-center px-5">Making the wonders of outer space accessible</p>
+                            </span>
+                        </div>
+                        <div class="w-[318px] h-[318px] rounded-full bg-[#FEEEE0] flex flex-col items-center justify-center gap-y-[5px] goals-circles">
+                            <span class="initial flex flex-col items-center">
+                                <img src="public/images/about/lightbulb-on-solid-full.png" alt="">
+                                <h5 class="text-[#1B2532]">INSPIRE</h5>
+                            </span>
+                            <span class="on-hover">
+                                <h5 class="text-[#1B2532]">INSPIRE</h5>
+                                <p class="text-[#1B2532] text-center px-5">Encouraging curiosity about the universe</p>
+                            </span>
+                        </div>
+                    </div>  
+            </div>
+            
+            <div>
+                <img src="public/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div>
+        </div>
+
+        <div class="contact-form-container w-screen h-[1135px] bg-[#1B2532] flex flex-col relative items-center justify-center">
+            <h2 class="mb-[3rem]">LET'S CONNECT!</h2>
+            <form action="" class="contact-form flex flex-col gap-6 p-[5rem] bg-[#3E536F] bg-opacity-50 h-fit w-7/12 rounded-[40px] justify-center">
+                <div>
+                    <h5 class="text-center pb-[0.8rem]">Enjoyed your visit to COSMOS? Leave us a message!</h5>
+                </div>
+                <div class="name-and-email grid grid-cols-2 gap-5">
+                    <div class="full-name-container flex flex-col gap-2">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="email-container flex flex-col gap-2">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="subject-line w-full flex flex-col gap-2">
+                    <label for="email">Subject</label>
+                    <input type="text" id="email" name="email" placeholder="What is your message about?">
+                </div>
+                <div class="message-box w-full flex flex-col gap-2">
+                    <label for="message-input">Message</label>
+                    <textarea name="message-input" id="message-input" placeholder="Share your thoughts here" class="h-[15rem]"></textarea>
+                </div>
+                <button type="submit" class="w-fit">SUBMIT</button>
+            </form>
+        </div>
+
+        <div class="newsletter-frame-full relative">
+            <div class="newsletter w-screen h-[1270px] bg-[#1B2532] flex relative items-center justify-between left-0 pb-[15rem]">
+                <div class="constellations constellations-left">
+                    <img src="public/images/constellationsLeft.png" alt="">
+                </div>
+                <div class="newsletter-container relative flex items-center justify-center">
+                    <img src="public/images/newsletterImage.png" alt="">
+                    <div class="newsletter-info w-[85%] h-[75%] aspect-auto bg-[#FEEEE0] rounded-[40px] absolute
+                    mt-[25rem] ml-[5rem] z-10 flex justify-center pl-[2.5rem] pr-[2.5rem]">
+                    <div class="flex flex-col gap-[25px] justify-center">
+                        <h3 class="text-[#1B2532] text-center">JOIN OUR NEWSLETTER FOR THE LATEST SPACE NEWS!</h3>
+                        <p class="text-[18px] text-[#1B2532] text-center">Stay up to date with our space newsletter, 
+                        bringing you the latest discoveries, missions, and cosmic wonders from across the universe.</p>
+                        <button class="size-fit self-center border-[#EEDDC3]">SIGN UP</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="constellations constellations-right">
+                    <img src="public/images/constellationsRight.png" alt="">
+                </div>
+            </div>
+            <div class="footer-wave">
+            <img src="public/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div>
+        </div>
+
+    </main>
+    
+    <footer id="footer-container"></footer>
+
+    <script>
+      $(function() {
+        $("#header-container").load("header-2.html"); // adjust path
+        $("#footer-container").load("footer.html"); // adjust path
+      });
+    </script>
+
+</body>
+</html>
