@@ -13,21 +13,43 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="header header-home flex bg-[#9F7140] w-screen h-[80px] absolute top-0 left-0 right-0 m-0">
+    <div class="header header-2 header-home flex bg-[#9F7140] w-screen h-[80px] absolute top-0 left-0 right-0 m-0">
        <nav class="flex flex-row items-center relative w-screen justify-between">
             <div class="flex pl-6">
                 <h4 class="text-[32px]"><a href="index.html">COSMOS</a></h4>
             </div>
             <div class="flex pr-6">
-                <ul class="flex flex-row">
-                    <li class="nav-item mr-[30px]"><a href="about.html">ABOUT</a></li>
-                    <li class="nav-item mr-[30px]"><a href="solar-system.html">PLANETS</a></li>
-                    <li class="nav-item mr-[30px]"><a href="star-stories.html">STARS</a></li>
+                <input type="checkbox" id="menu-toggle" class="hidden">
+                <label for="menu-toggle" class="hamburger-icon w-full">
+                    <img src="/images/icons/more_cream.svg" alt="" class="w-[30px] h-[30px] mr-[10px] hover:scale-110 hamburger-image">
+                </label>
+                <ul class="nav-items flex flex-row">
+                    <li class="nav-item mr-[30px] max-md:mr-0"><a href="about.html">ABOUT</a></li>
+                    <li class="nav-item mr-[30px] max-md:mr-0"><a href="solar-system.html">PLANETS</a></li>
+                    <li class="nav-item mr-[30px] max-md:mr-0"><a href="star-stories.html">STARS</a></li>
                     <li class="nav-item "><a href="stellar-gallery.html">GALLERY</a></li>
                 </ul>
             </div>
         </nav>
     </div>
+
+    <!-- <div class="header header-2 header-home flex bg-[#9F7140] w-screen h-[80px] absolute top-0 left-0 right-0 m-0">
+       <nav class="nav-large">
+            <div class="w-full flex justify-between items-center gap-x-[67vw]">
+                <h4 class="text-[32px] ml-[20px]"><a href="index.html">COSMOS</a></h4>
+                <input type="checkbox" id="menu-toggle" class="hidden">
+                <label for="menu-toggle" class="hamburger-icon w-full">
+                    <img src="/images/icons/more_cream.svg" alt="" class="w-[30px] h-[30px] mr-[30px]">
+                </label>
+            </div>
+            <ul class="nav-items flex flex-row">
+                <li class="nav-item mr-[30px] max-md:mr-0"><a href="about.html">ABOUT</a></li>
+                <li class="nav-item mr-[30px] max-md:mr-0"><a href="solar-system.html">PLANETS</a></li>
+                <li class="nav-item mr-[30px] max-md:mr-0"><a href="star-stories.html">STARS</a></li>
+                <li class="nav-item"><a href="stellar-gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </div> -->
 
     
 </body>

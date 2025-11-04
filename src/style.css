@@ -34,6 +34,18 @@
   --mid-blue-darker: #2C3C50;
 }
 
+.disable-transitions * {
+  transition: none !important;
+}
+
+/* .disable-hovers {
+  display: none;
+} */
+
+.no-pointer {
+  pointer-events: none !important;
+}
+
 .nav-item {
   font-family: "Martian Mono", monospace;
   font-size: 24px;
@@ -51,6 +63,57 @@ a {
   font-weight: bold;
 }
 
+.hamburger-icon {
+  display: none;
+}
+
+.hamburger-image {
+  transition: scale 300ms ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .header-1 {
+    justify-content: end;
+    background-color: var(--deep-gold);
+  }
+
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 80px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: var(--deep-gold);
+    z-index: 10;
+  }
+
+  .header-1 .nav-items {
+    padding-bottom: 80px;
+  }
+
+  .nav-item a {
+    text-align: center;
+  }
+
+  .hamburger-icon  {
+    display: contents;
+  }
+
+  #menu-toggle:checked ~ .nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* #menu-toggle:checked ~ .header {
+    height: 200px;
+  } */
+}
+
 .footer-nav {
   color: var(--cream);
   font-family: sans-serif;
@@ -62,6 +125,22 @@ a {
 
 .footer-nav a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--deep-gold);
+  text-decoration-thickness: 3px;
+}
+
+.footer-top-small {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-top-large {
+    display: none;
+  }
+
+  .footer-top-small {
+    display: flex;
+  }
 }
 
 body {
@@ -124,8 +203,22 @@ p {
   font-size: 14px !important;
 }
 
+.transition-vector {
+  height: 10vw;
+}
+
 /* responsive queries for fonts and transitions */
+@media screen and (max-width: 1240px) {
+  /* .transition-vector {
+    height: 140px;
+  } */
+}
+
 @media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 50px !important;
+  }
+
   h2 {
     font-size: 36px !important;
   }
@@ -133,14 +226,22 @@ p {
   h3 {
     font-size: 32px !important;
   }
+/* 
+  h4 {
+    font-size: 22px !important;
+  } */
+
+  h5 {
+    font-size: 20px !important;
+  }
 
   p {
     font-size: 18px !important;
   }
 
-  .transition-vector {
-    height: 120px !important;
-  }
+  /* .transition-vector {
+    height: 120px;
+  } */
 
   button {
     font-size: 1.25rem !important;
@@ -149,20 +250,68 @@ p {
 
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 48px !important;
+    font-size: 45px !important;
+  }
+
+  h2 {
+    font-size: 33px !important;
   }
 
   h3 {
     font-size: 24px !important;
   }
 
+  h5 {
+    font-size: 17px !important;
+  }
+
   p {
     font-size: 16px !important;
   }
 
-  .transition-vector {
-    height: 90px !important;
+  /* .transition-vector {
+    height: 90px;
+  } */
+}
+
+@media screen and (max-width: 639px) {
+  h1 {
+    font-size: 36px !important;
   }
+
+  h2 {
+    font-size: 32px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+
+  /* .transition-vector {
+    height: 70px;
+  } */
+}
+
+@media screen and (max-width: 440px) {
+  h1 {
+    font-size: 32px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  h5 {
+    font-size: 18px !important;
+  }
+
+  /* .transition-vector {
+    height: 50px;
+  } */
 }
 
 #app {
@@ -233,14 +382,105 @@ button.arrow-button:hover {
   border-radius: 50%;
   border-color: var(--cream);
   border-width: 5px;
-  max-width: 20rem;
+  /* max-width: 20rem; */
+}
+
+/* home page effects */
+.hero-text {
+  opacity: 0;
+  animation: fadeIn 600ms ease-in forwards;
+  animation-delay: 300ms;
+}
+
+.hero-icon {
+  opacity: 0;
+  animation: fadeIn 600ms ease-in forwards;
+  /* animation-delay: 700ms; */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* slide in right animation */
+.slide-in-right {
+  transform: translateX(100px);
+  opacity: 0;
+  /* animation: slideInRight 600ms ease-in-out forwards;
+  animation-delay: 300ms; */
+  transition: all 600ms ease-in-out;
+}
+
+.slide-in-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-in-right-slow {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 1000ms ease-in-out;
+}
+
+.slide-in-right-slow.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* slide in left animation */
+.slide-in-left {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+}
+
+.slide-in-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-in-left-slow {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 1000ms ease-in-out;
+}
+
+.slide-in-left-slow.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* slide up animation */
+.slide-up {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+}
+
+.slide-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* fade in animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 600ms ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
 }
 
 /* stellar gallery styles */
 
 #stellar-gallery {
-  margin: 2rem;
-  margin-bottom: 4rem;
+  margin: 4vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-flow: row;
@@ -253,6 +493,20 @@ button.arrow-button:hover {
   padding: 0;
   width: calc(100vh / 3.75);
   height: auto;
+}
+
+#stellar-gallery .default {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  /* pointer-events: none; */
+}
+
+#stellar-gallery .default.visible {
+  opacity: 1;
+}
+
+#stellar-gallery .default.done {
+  pointer-events: auto;
 }
 
 .stellar-gallery-caption {
@@ -268,6 +522,86 @@ button.arrow-button:hover {
   border-bottom-left-radius: 40px;
   max-width: 85%;
   gap: 40px;
+}
+
+.pswp__img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.pswp__icn-shadow,
+#pswp__icn-arrow {
+  display: none;
+}
+
+.pswp__button--arrow--prev,
+.pswp__button--arrow--next {
+  border-radius: 8px;
+  padding: 0.2em 0.8em;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  background-color: var(--deep-gold);
+  opacity: 0.5 !important;
+  transition: all 200ms ease-in-out !important;
+  cursor: pointer;
+  width: clamp(50px, 7vw, 70px);
+  height: clamp(50px, 7vw, 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pswp__button--arrow--prev:hover,
+.pswp__button--arrow--next:hover {
+  opacity: 1 !important;
+  background-color: var(--deep-gold);
+}
+
+.pswp__button--arrow--prev::before,
+.pswp__button--arrow--next::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+
+.pswp__button--arrow--prev::before {
+  /* background-image: url(/images/solarSystem/leftIcon.svg); */
+  content: url(/images/solarSystem/leftIcon.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pswp__button--arrow--next::before {
+  content: url(/images/solarSystem/rightIcon.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pswp__button--close {
+  content: url(/images/icons/close_small.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: padding 300ms ease-in-out !important;
+}
+
+.pswp__button--close svg {
+  display: none;
+}
+
+/* .pswp__button-close:hover {
+  padding: 8px;
+} */
+
+.pswp__button--zoom {
+  display: none !important;
 }
 
 /* responsive stellar gallery styles */
@@ -298,6 +632,11 @@ button.arrow-button:hover {
     width: calc(100vh / 3.5);
     height: auto;
   }
+
+  /* .gallery-title {
+    position: sticky;
+    top: 1.75rem;
+  } */
 }
 
 @media screen and (max-width: 870px) {
@@ -310,10 +649,10 @@ button.arrow-button:hover {
     height: auto;
   }
 
-  .clear-button,
+  /* .clear-button,
   .filter-button {
     font-size: 14px !important;
-  }
+  } */
 }
 
 @media screen and (max-width: 650px) {
@@ -322,54 +661,54 @@ button.arrow-button:hover {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #stellar-gallery {
+    margin: 2rem;
+  }
+}
+
 /* image gallery styles */
 
 .image-gallery {
-  padding-top: 5rem;
+  padding-top: 5vw;
   display: flex;
-  flex-wrap: wrap;
-  gap: 55px;
+  /* flex-wrap: wrap; */
+  gap: 3vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
 }
 
 .gallery-photo img {
-  transition: opacity 200ms ease-in-out;
+  width: clamp(200px, 30vw, 400px);
+  height: auto;
+  /* transition: opacity 200ms ease-in-out; */
+}
+
+.gallery-photo .default {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.gallery-photo .default.visible {
+  opacity: 1;
+}
+
+.gallery-photo .default.done {
+  pointer-events: auto;
 }
 
 .gallery-photo .on-hover {
   display: none;
 }
 
-.gallery-photo:hover .initial {
+/* .gallery-photo:hover .initial {
   display: none;
 }
 
 .gallery-photo:hover .on-hover {
   transition-duration: 300ms;
   display: contents;
-}
-
-/* responsive queries for image gallery  */
-@media screen and (max-width: 1214px) {
-  .image-gallery {
-    gap: 30px !important;
-    padding-top: 3rem !important;
-  }
-
-
-  .gallery-photo img {
-    width: 250px;
-  }
-
-  .gallery-caption {
-    margin-top: 3rem !important;
-  }
-}
-
-@media  screen and (max-width: 767px) {
-  .gallery-photo img {
-    width: 200px;
-  }
-}
+} */
 
 .gallery-caption {
   display: flex;
@@ -378,7 +717,7 @@ button.arrow-button:hover {
   background-color: var(--mid-blue);
   width: fit-content;
   padding: 24px 50px;
-  margin-top: 75px;
+  margin-top: 5vw;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
   max-width: 85%;
@@ -393,8 +732,95 @@ button.arrow-button:hover {
   color: var(--dark-blue);
 }
 
+@media screen and (max-width: 767px) {
+  .gallery-caption {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 3vw;
+  }
+}
+
+/* responsive queries for image gallery  */
+@media  screen and (max-width: 660px) {
+  /* .gallery-container {
+    height: fit-content;
+  } */
+
+  .image-gallery {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8vw;
+    margin-right: 8vw;
+    margin-left: 8vw;
+    padding-top: 30px;
+  }
+
+  .gallery-photo img {
+    width: clamp(250px, 80vw, 328px);
+  }
+
+  .gallery-caption {
+    margin-top: 8vw;
+  }
+}
+
+/* newsletter responsive styles */
+@media screen and (max-width: 958px) {
+  .newsletter {
+    justify-content: center;
+  }
+
+  .constellations-left,
+  .constellations-right {
+    display: none;
+  }
+
+  .newsletter-container {
+    width: 80%;
+    height: auto;
+    aspect-ratio:initial;
+  }
+}
+
+/* @media screen and (max-width: 555px) {
+  .newsletter-container {
+    width: 95vw;
+    aspect-ratio: initial;
+  }
+} */
+
+@media screen and (max-width: 555px) {
+  .newsletter-container img {
+    display: none;
+  }  
+  .newsletter-container {
+    width: 95vw;
+    aspect-ratio: initial;
+  }
+}
+
+/* about page styles */
 .goals-circles {
   transition: all 200ms ease-in-out;
+  width: calc(100vw/4);
+  height: calc(100vw/4);
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 100%;
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  opacity: 0;
+  /* transition: opacity 300ms ease-in-out; */
+  /* pointer-events: none; */
+}
+
+.goals-circles.visible {
+  opacity: 1;
 }
 
 .goals-circles .on-hover {
@@ -413,27 +839,122 @@ button.arrow-button:hover {
   background-color: var(--yellow);
 }
 
+@media screen and (max-width: 750px) {
+  .goals-gallery {
+    flex-direction: column !important;
+  }
+
+  .goals-circles {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .goals-circles {
+    width: 60vw;
+    height: 60vw;;
+  }
+}
+
+/* solar system page  */
+.planets-hero-small {
+  display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+  .planets-hero-large {
+    display: none;
+  }
+
+  .planets-hero-small {
+    display: flex;
+  }
+}
+
 /* code for new carousel  */
 
 .planets-container {
   position: relative;
+  --planet-scale: clamp(0.5vw, 1.5vw, 3vw);
 }
 
+/* .planet img {
+  width: var(--planet-size);
+  height: auto;
+  object-fit: contain;
+} */
+
 .swiper {
-  margin: 5rem;
+  /* margin: 5rem; */
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: flex-end;
+  height: auto;
 }
 
 .swiper-slide {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  padding-bottom: 5%;
+  justify-content: flex-end;
+  /* padding-bottom: 5%; */
+  /* padding-top: 5%; */
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.image-swap .planet-image img {
+  width: calc(var(--planet-scale) * var(--planet-size));
+  height: auto;
+}
+
+
+.swiper-slide[data-planet="sun"]        { --planet-size: 11.5; }
+.swiper-slide[data-planet="mercury"]    { --planet-size: 2; }
+.swiper-slide[data-planet="venus"]      { --planet-size: 1.95; }
+.swiper-slide[data-planet="earth"]      { --planet-size: 3.6; }
+.swiper-slide[data-planet="mars"]       { --planet-size: 2.6; }
+.swiper-slide[data-planet="jupiter"]    { --planet-size: 8; }
+.swiper-slide[data-planet="saturn"]     { --planet-size: 12.2; }
+.swiper-slide[data-planet="uranus"]     { --planet-size: 5; }
+.swiper-slide[data-planet="neptune"]    { --planet-size: 4.4; }
+.swiper-slide[data-planet="pluto"]      { --planet-size: 1.3; }
+
+.stars-container {
+  position: relative;
+  --star-scale: clamp(1vw, 3vw, 5vw);
 }
 
 .constellation-slide {
-  padding-bottom: 0;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* padding-bottom: 5%; */
+  /* padding-top: 5%; */
+  align-items: center;
+  text-align: center;
+  height: 100%;
 }
+
+.constellation-image img {
+  width: calc(var(--star-scale) * var(--star-size));
+  height: auto;
+}
+
+.constellation-slide[data-star="ursa-major"]        { --star-size: 11; }
+.constellation-slide[data-star="cygnus"]    { --star-size: 10; }
+.constellation-slide[data-star="lyra"]      { --star-size: 8.9; }
+.constellation-slide[data-star="perseus"]      { --star-size: 5.1; }
+.constellation-slide[data-star="aquila"]       { --star-size: 10; }
 
 .custom-next,
 .custom-prev {
@@ -441,8 +962,8 @@ button.arrow-button:hover {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 66px;
-  height: 50px;
+  width: clamp(40px, 6vw, 65px);
+  height: clamp(34px, 5vw, 55px);
   background-color: var(--deep-gold);
   opacity: 0.5;
   border: none;
@@ -468,7 +989,7 @@ button.arrow-button:hover {
   left: 1rem;
 }
 
-/* hover effects for planets in carousel */
+/* image swap effect used in galleries and carousels */
 .image-swap {
   position: relative;
   display: inline-block;
@@ -492,6 +1013,126 @@ button.arrow-button:hover {
 
 .image-swap:hover .default {
   opacity: 0;
+}
+
+/* responsive code for individual constellation and planet pages */
+/* .star-details-small {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .star-details-large {
+    display: none;
+  }
+
+  .star-details-small {
+    display: flex;
+  }
+} */
+
+/* constellation single page styles */
+.single-constellation,
+.single-planet {
+  width: 100vw;
+  height: fit-content;
+  background-color: var(--pale-blue);
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 100px;
+  padding-bottom: 2vw;
+}
+
+.single-planet {
+  background-color: var(--dark-blue);
+}
+
+.constellation-info-container,
+.planet-info-container {
+  margin-bottom: calc(100vw / 8);
+  margin-left: 3rem;
+  margin-top: 3rem;
+  background-color: #D8A966;
+  padding: 2.5rem;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.planet-info-container {
+  background-color: var(--pale-blue);
+}
+
+.constellation-text-container,
+.planet-text-container {
+  width: calc(6/12 * 100%);
+  height: calc(6/12 * 100%);
+  margin-right: 2.5rem;
+}
+
+.star-name,
+.planet-name {
+  margin-bottom: 30px;
+  color: var(--dark-blue);
+}
+
+.star-text,
+.planet-text {
+  color: var(--dark-blue);
+}
+
+@media screen and (min-width: 1450px) {
+  .constellation-text-container,
+  .planet-text-container {
+    width: calc(10/12 * 100%);
+    height: calc(10/12 * 100%);
+  }
+
+  .single-image {
+    min-width: 500px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .single-constellation,
+  .single-planet {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .constellation-info-container,
+  .planet-info-container {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(100vw/1.25);
+    justify-content: center;
+    flex-direction: column-reverse;
+    border-radius: 40px;
+  }
+
+  .constellation-text-container,
+  .planet-text-container {
+    width: calc(9/12 * 100%);
+    height: calc(9/12 * 100%);
+    margin-right: 0;
+  }
+
+  .star-image,
+  .planet-image {
+    margin-inline: 10%;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .star-name,
+  .planet-name {
+    margin-bottom: 15px;
+  }
 }
 
 /* code for carousel test */
@@ -547,6 +1188,7 @@ button.arrow-button:hover {
 }
 /* end code for carousel test */
 
+/* form styles */
 form input {
   background-color: var(--pale-blue);
   height: 2.5rem;
@@ -577,6 +1219,7 @@ form textarea::placeholder {
 form input:focus,
 form textarea:focus {
   outline: none;
+  background-color: var(--cream);
 }
 
 @media (prefers-color-scheme: light) {

@@ -9,7 +9,12 @@ const lightbox = new PhotoSwipeLightbox({
   gallery: '#stellar-gallery',
   children: 'a',
   counter: false,
-  pswpModule: () => import('photoswipe')
+  showHideAnimationType: 'fade',
+  showAnimationDuration: 500,
+  hideAnimationDuration: 400,
+  pswpModule: () => import('photoswipe'),
+
+  zoom: false,
 });
 lightbox.init();
 

@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Aquila</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <header id="header-container"></header>
+
+    <main class="flex flex-grow mt-4 flex-col">
+        <div class="single-constellation">
+            <div class="constellation-info-container slide-in-right">
+                <div class="constellation-text-container">
+                    <h2 class="star-name">AQUILA</h2>
+                    <div class="flex flex-col gap-[1vw]">
+                        <p class="star-text"><strong>AKA:</strong> The Eagle</p>
+                        <p class="star-text"><strong>Brightest Star:</strong> Altair, magnitude 0.77</p>
+                        <p class="star-text"><strong>Location:</strong> Near the celestial equator</p>
+                        <p class="star-text"><strong>Visibility:</strong> Best seen in the summer months from both the Northern and Southern Hemispheres, 
+                            soaring high along the Milky Way between Sagittarius and Cygnus.</p>
+                        <p class="star-text"><strong>Story:</strong> In Greek mythology, Aquila represents the eagle of Zeus, who carried his thunderbolts and 
+                            sometimes served as his messenger. The constellation symbolizes strength, loyalty, and divine power.</p>
+                    </div>
+                </div>
+                <div class="star-image">
+                    <img class="circular-mask single-image" src="/images/constellationPages/aquila_starArt_4.png" alt="">
+                </div>
+            </div>
+            <div class="footer-wave">
+                <img src="public/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div>
+        </div>
+    </main>
+    
+    <footer id="footer-container"></footer>
+
+    <script>
+      $(function() {
+        $("#header-container").load("header-2.html"); // adjust path
+        $("#footer-container").load("footer.html"); // adjust path
+      });
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        document.body.classList.add('disable-transitions');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          document.body.classList.remove('disable-transitions');
+        }, 200);
+      });
+
+      const animatedElements = document.querySelectorAll('.slide-in-right');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      animatedElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

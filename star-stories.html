@@ -25,7 +25,7 @@
     <header id="header-container"></header>
 
     <main class="flex flex-grow mt-4 flex-col">
-        <div class="solar-system-start bg-[#3E536F] flex w-full h-[1000px] relative">
+        <!-- <div class="solar-system-start bg-[#3E536F] flex w-full h-[1000px] relative">
             <div class="w-[60px]">
                 <h1 class="m-7 mr-[15px] break-all">STAR</h1>
             </div>
@@ -36,7 +36,7 @@
             <div class="flex flex-1 h-full justify-between items-center">
                 <div class="flex justify-start items-center h-full ml-28">
                     <video class="circular-mask w-fit h-fit" autoplay loop muted>
-                        <source src="public/images/starStories/skyMap.mp4" type="video/mp4" />
+                        <source src="/images/starStories/skyMap.mp4" type="video/mp4" />
                     </video>
                 </div>
                 <div class="welcome-message flex flex-col bg-[#D8A966] w-5/12 h-fit py-[50px] px-[42px] rounded-l-[40px] ml-[5rem]">
@@ -46,58 +46,114 @@
                         holds a tale waiting to be told.</p>
                 </div>
             </div>
+        </div> -->
+
+        <!-- stars hero frame for larger screens -->
+        <div class="solar-system-start planets-hero-large bg-[#3E536F] flex w-full h-fit relative">
+            <div class="w-fit flex flex-row m-7 max-md:m-5 mr-[4vw] title-large">
+                <div class="w-[60px]">
+                    <h1 class="break-all">STAR</h1>
+                </div>
+                <div class="w-[60px] mt-[132px] max-lg:mt-[110px] max-md:mt-[98px] ml-[1rem] max-lg:ml-0">
+                    <h1 class="break-all">STORIES</h1>
+                </div>
+            </div>
+
+            <div class="solar-system-hero overflow-x-hidden flex flex-1 h-fit justify-between items-center mt-[3vw]">
+                <div class="flex justify-center items-center max-w-6/12 min-[1500px]:w-full">
+                    <video class="circular-mask w-fit h-fit" autoplay loop muted>
+                        <source src="/images/starStories/skyMap.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="welcome-message slide-in-right flex flex-col bg-[#1B2532] w-5/12 min-[1500px]:w-full h-fit py-[50px] px-[42px] rounded-l-[40px] ml-[1rem] 
+                min-[1500px]:ml-[5vw]">
+                    <h5 class="mb-[30px]">Explore the night sky</h5>
+                    <p>We’re setting off among the stars, where astronomy meets mythology to uncover the fascinating secrets of the 
+                        vast night sky. From ancient constellations to radiant stellar giants, every sparkling corner of the heavens 
+                        holds a tale waiting to be told.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="choose-constellation bg-[#3E536F] flex w-full h-[1000px] relative justify-start items-center">
-            <div class="w-[1256px] h-[562px] flex flex-col mb-[25rem]">
-                <h2 class="mb-[30px] text-right">CHOOSE A CONSTELLATION TO EXPLORE:</h2>
-                <div class="planets-container size-full bg-[#EEDDC3] rounded-r-[40px] flex justify-center items-center">
+        <!-- stars hero frame for smaller screens  -->
+        <div class="solar-system-start overflow-x-hidden planets-hero-small bg-[#3E536F] flex flex-col w-full h-fit relative">
+            <div class="solar-system-hero flex h-fit justify-start mt-[3vw]">
+                <div class="flex">
+                    <div class="w-fit flex flex-row ml-5 mb-5 max-md:mt-0 max-sm:mt-1 max-[440px]:mt-2 title-small">
+                        <div class="w-min">
+                            <h1 class="break-all">STAR</h1>
+                        </div>
+                        <div class="w-min mt-[110px] max-md:mt-[99px] max-sm:mt-[79px] max-[440px]:mt-[71px] ml-[25px] max-sm:ml-[20px]">
+                            <h1 class="break-all">STORIES</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center ml-[12vw] max-[550px]:ml-[10vw] max-w-6/12 max-[550px]:max-w-full">
+                    <video class="circular-mask w-fit max-[550px]:max-w-[60vw]" autoplay loop muted>
+                        <source src="/images/starStories/skyMap.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+            <div class="welcome-message slide-in-right flex flex-col bg-[#1B2532] w-fit h-fit py-[50px] px-[42px] rounded-l-[40px] ml-[10vw]">
+                    <h5 class="mb-[30px]">Explore the night sky</h5>
+                    <p>We’re setting off among the stars, where astronomy meets mythology to uncover the fascinating secrets of the 
+                        vast night sky. From ancient constellations to radiant stellar giants, every sparkling corner of the heavens 
+                        holds a tale waiting to be told.</p>
+            </div>
+        </div>
+
+        <div class="spacer w-screen h-[8vw] min-[1150px]:h-[90px] bg-[#3E536F]"></div>
+
+        <div class="choose-constellation overflow-x-hidden bg-[#3E536F] flex w-full h-fit relative items-center">
+            <div class="slide-in-left w-[90vw] h-[50vw] max-[572px]:h-[70vw]">
+                <h2 class="mb-[30px] max-md:mb-[20px] text-right">CHOOSE A CONSTELLATION:</h2>
+                <div class="stars-container bg-[#EEDDC3] rounded-r-[40px] flex justify-center items-center min-[1070px]:h-[37vw]">
                     <!-- Slider main container -->
                     <div class="swiper">
                     <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper pt-[2vw] pb-[2vw]">
                         <!-- Slides -->
-                        <div class="swiper-slide constellation-slide">
+                        <div class="swiper-slide constellation-slide" data-star="ursa-major">
                             <div class="gap-[17px] h-[70%] flex flex-col justify-center items-center mb-[17px]">
-                                <div class="image-swap">
-                                    <img class="default" src="public/images/starStories/constellationSVGs/UrsMajor.svg" alt="">
-                                    <img class="hover" src="public/images/starStories/constellationSVGs/UrsMajor_hover.svg" alt="">
+                                <div class="image-swap constellation-image">
+                                    <a href="/ursa-major.html"><img class="default" src="/images/starStories/constellationSVGs/UrsMajor.svg" alt=""></a>
+                                    <a href="/ursa-major.html"><img class="hover" src="/images/starStories/constellationSVGs/UrsMajor_hover.svg" alt=""></a>
                                 </div>
                             </div>
                             <p class="text-[#1B2532] text-center"><strong>Ursa Major</strong></p>
                         </div>
-                        <div class="swiper-slide constellation-slide">
+                        <div class="swiper-slide constellation-slide" data-star="cygnus">
                             <div class="gap-[17px] h-[70%] flex flex-col justify-center items-center mb-[17px]">
-                                <div class="image-swap">
-                                    <img class="default" src="public/images/starStories/constellationSVGs/Cygnus.svg" alt="">
-                                    <img class="hover" src="public/images/starStories/constellationSVGs/Cygnus_hover.svg" alt="">
+                                <div class="image-swap constellation-image">
+                                    <a href="/cygnus.html"><img class="default" src="/images/starStories/constellationSVGs/Cygnus.svg" alt=""></a>
+                                    <a href="/cygnus.html"><img class="hover" src="/images/starStories/constellationSVGs/Cygnus_hover.svg" alt=""></a>
                                 </div>
                             </div>
                             <p class="text-[#1B2532] text-center"><strong>Cygnus</strong></p>
                         </div>
-                        <div class="swiper-slide constellation-slide">
+                        <div class="swiper-slide constellation-slide" data-star="lyra">
                             <div class="gap-[17px] h-[70%] flex flex-col justify-center items-center mb-[17px]">
-                                <div class="image-swap">
-                                    <img class="default" src="public/images/starStories/constellationSVGs/Lyra.svg" alt="">
-                                    <img class="hover" src="public/images/starStories/constellationSVGs/Lyra_hover.svg" alt="">
+                                <div class="image-swap constellation-image">
+                                    <a href="/lyra.html"><img class="default" src="/images/starStories/constellationSVGs/Lyra.svg" alt=""></a>
+                                    <a href="/lyra.html"><img class="hover" src="/images/starStories/constellationSVGs/Lyra_hover.svg" alt=""></a>
                                 </div>
                             </div>
                             <p class="text-[#1B2532] text-center"><strong>Lyra</strong></p>
                         </div>
-                        <div class="swiper-slide constellation-slide">
+                        <div class="swiper-slide constellation-slide" data-star="perseus">
                             <div class="gap-[17px] h-[70%] flex flex-col justify-center items-center mb-[17px]">
-                                <div class="image-swap">
-                                    <img class="default" src="public/images/starStories/constellationSVGs/Perseus.svg" alt="">
-                                    <img class="hover" src="public/images/starStories/constellationSVGs/Perseus_hover.svg" alt="">
+                                <div class="image-swap constellation-image">
+                                    <a href="/perseus.html"><img class="default" src="/images/starStories/constellationSVGs/Perseus.svg" alt=""></a>
+                                    <a href="/perseus.html"><img class="hover" src="/images/starStories/constellationSVGs/Perseus_hover.svg" alt=""></a>
                                 </div>
                             </div>
                             <p class="text-[#1B2532] text-center"><strong>Perseus</strong></p>
                         </div>
-                        <div class="swiper-slide constellation-slide">
+                        <div class="swiper-slide constellation-slide" data-star="aquila">
                             <div class="gap-[17px] h-[70%] flex flex-col justify-center items-center mb-[17px]">
-                                <div class="image-swap">
-                                    <img class="default" src="public/images/starStories/constellationSVGs/Aquila.svg" alt="">
-                                    <img class="hover" src="public/images/starStories/constellationSVGs/Aquila_hover.svg" alt="">
+                                <div class="image-swap constellation-image">
+                                    <a href="/aquila.html"><img class="default" src="/images/starStories/constellationSVGs/Aquila.svg" alt=""></a>
+                                    <a href="/aquila.html"><img class="hover" src="/images/starStories/constellationSVGs/Aquila_hover.svg" alt=""></a>
                                 </div>
                             </div>
                             <p class="text-[#1B2532] text-center"><strong>Aquila</strong></p>
@@ -106,40 +162,57 @@
                     </div>
 
                     </div>
-                    <button class="custom-prev"><img src="public/images/solarSystem/leftIcon.svg" alt=""></button>
-                    <button class="custom-next"><img src="public/images/solarSystem/rightIcon.svg" alt=""></button>
+                    <button class="custom-prev flex justify-center items-center"><img src="/images/solarSystem/leftIcon.svg" alt="" class="min-w-[16px]"></button>
+                    <button class="custom-next flex justify-center items-center"><img src="/images/solarSystem/rightIcon.svg" alt="" class="min-w-[16px]"></button>
                 </div>
             </div>
+            <!-- <div>
+                <img src="/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div> -->
+        </div>
+
+        <!-- <div class="spacer w-screen h-[10vw] max-[1600px]:h-[14vw] bg-[#3E536F]"></div> -->
+
+        <div class="flex relative w-screen h-fit bg-[#3E536F] pt-[15vw] min-[1150px]:pt-[150px]">
             <div>
-                <img src="public/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+                <img src="/images/transition_dakrBlue.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
             </div>
         </div>
 
-        <div class="w-screen h-[1050px] bg-[#1B2532] flex flex-col mt-0 relative">
-            <h2 class="text-center mt-[40px]">STAR GALLERY</h2>
+        <div class="w-screen h-fit bg-[#1B2532] flex flex-col mt-0 relative">
+            <h2 class="text-center mt-[40px]">STELLAR GALLERY</h2>
             <div class="image-gallery flex justify-center">
                 <div class="gallery-photo flex size-fit image-swap">
-                    <img src="public/images/starStories/starCluster.png" alt="" class="default circular-mask">
-                    <img src="public/images/starStories/starCluster_hover.png" alt="" class="hover circular-mask">
+                    <img src="/images/starStories/starCluster.png" alt="" class="default circular-mask">
+                    <img src="/images/starStories/starCluster_hover.png" alt="" class="hover circular-mask">
                 </div>
                 <div class="gallery-photo flex size-fit image-swap">
-                    <img src="public/images/starStories/nebula_1.png" alt="" class="default circular-mask">
-                    <img src="public/images/starStories/nebula_1_hover.png" alt="" class="hover circular-mask">
+                    <img src="/images/starStories/nebula_1.png" alt="" class="default circular-mask">
+                    <img src="/images/starStories/nebula_1_hover.png" alt="" class="hover circular-mask">
                 </div>
                 <div class="gallery-photo flex size-fit image-swap">
-                    <img src="public/images/starStories/spiralGalaxy.png" alt="" class="default circular-mask">
-                    <img src="public/images/starStories/spiralGalaxy_hover.png" alt="" class="hover circular-mask">
+                    <img src="/images/starStories/spiralGalaxy.png" alt="" class="default circular-mask">
+                    <img src="/images/starStories/spiralGalaxy_hover.png" alt="" class="hover circular-mask">
                 </div>
             </div>
             <div class="gallery-caption gallery-caption-yellow">
-                <p>Step into our star gallery and enjoy vivid images of constellations, glowing clusters, and the sparkling lights of the night sky.</p>
-                <button class="whitespace-nowrap">FULL GALLERY</button>
+                <p>Step into our gallery and enjoy vivid images of constellations, glowing clusters, and the sparkling lights of the night sky.</p>
+                <a href="/stellar-gallery.html"><button class="whitespace-nowrap">FULL GALLERY</button></a>
             </div>
+            <!-- <div class="footer-wave">
+                <img src="/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div> -->
         </div>
 
-        <div class="solar-system w-screen h-[888px] bg-[#1B2532] flex relative items-center pl-[150px] justify-between">
+        <div class="flex relative w-screen h-fit bg-[#1B2532] pt-[18vw]">
+          <div>
+              <img src="/images/footerWave.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
+          </div>
+      </div>
+
+        <!-- <div class="solar-system w-screen h-[888px] bg-[#1B2532] flex relative items-center pl-[150px] justify-between">
         <div class="left mb-[20rem]">
-          <img src="public/images/starStories/starCycle.png" alt="" class="circular-mask">
+          <img src="/images/starStories/starCycle.png" alt="" class="circular-mask">
         </div>
         <div class="flex w-[50rem] max-w-full mb-[15rem]">
           <div class="right flex flex-col ml-[92px]">
@@ -150,9 +223,9 @@
                 </div>
           </div>
             <div class="footer-wave">
-                <img src="public/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+                <img src="/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
             </div>
-        </div>
+        </div> -->
     </main>
     
     <footer id="footer-container"></footer>
@@ -163,20 +236,63 @@
         $("#footer-container").load("footer.html");
       });
 
+      const animatedElements = document.querySelectorAll('.slide-in-right, .slide-in-right-slow, .slide-in-left, .slide-in-left-slow, .slide-up');
+      const images = document.querySelectorAll('.gallery-photo .default');
+
       const swiper = new Swiper('.swiper', {
         loop: true,
         // default values
-        slidesPerView: 2,
-        spaceBetween: 5,
+        slidesPerView: 1,
         // centeredSlides: true,
+        breakpoints: {
+            500: {
+                slidesPerView: 2,
+            },
+        },
 
         // Navigation arrows
         navigation: {
             nextEl: '.custom-next',
             prevEl: '.custom-prev',
         },
+        ResizeObserver: true,
 
       });
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        document.body.classList.add('disable-transitions');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          document.body.classList.remove('disable-transitions');
+        }, 200);
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      const observer2 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            images.forEach((img, i) => {
+              img.classList.remove('done');
+              setTimeout(() => {
+                  img.classList.add('visible');
+              }, i * 200);
+              img.classList.add('done');
+            });
+          }
+        });
+      });
+
+      animatedElements.forEach(el => observer.observe(el));
+      images.forEach(el => observer2.observe(el));
     </script>
 
 </body>

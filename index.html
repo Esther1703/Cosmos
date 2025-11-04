@@ -21,63 +21,74 @@
     <header id="header-container"></header>
 
     <main class="flex flex-grow mt-4 flex-col">
-      <div class="hero bg-[url('public/images/galaxyBW41.png')] flex bg-cover bg-center w-screen h-[1000px] max-lg:h-[800px] max-md:h-[600px] bg-no-repeat relative">
+      <div class="hero bg-[url('/images/hero_new.jpg')] flex bg-cover bg-center w-screen h-[1000px] max-lg:h-[800px] max-md:h-[600px] max-sm:h-[500px] max-[440px]:h-[400px] bg-no-repeat relative">
         <div class="w-[60px]">
           <h1 class="m-7 break-all">COSMOS</h1>
         </div>
-        <div class="flex flex-col absolute justify-center items-center w-screen h-[1000px] max-lg:h-[800px] max-md:h-[600px]">
-          <img src="public/images/icons/rocket.svg" alt="" class="mb-[10px] max-lg:size-18 max-md:size-16">
-          <h3 class="w-[377px] h-[230px] text-center">EXPLORE SPACE (NO SPACESHIP NEEDED)</h3>
+        <div class="flex flex-col absolute justify-center items-center w-screen h-[1000px] max-lg:h-[800px] max-md:h-[700px] max-sm:h-[600px] max-[440px]:h-[550px]">
+          <img src="/images/icons/rocket.svg" alt="" class="hero-icon mb-[10px] max-lg:size-18 max-md:size-16 max-sm:size-14 max-[440px]:size-12">
+          <h3 class="hero-text w-[377px] h-[230px] text-center">EXPLORE SPACE (NO SPACESHIP NEEDED)</h3>
         </div>
-        <img src="public/images/transition_lightBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute origin-bottom-left bottom-0">
+        <img src="/images/transition_lightBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute origin-bottom-left bottom-0">
       </div>
 
-      <div class="solar-system w-screen h-[888px] max-lg:h-[650px] max-md:h-[500px] bg-[#95A2B4] flex relative items-center pl-[150px] max-lg:pl-[80px] max-md:pl-[40px] justify-between">
-        <div class="left mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem]">
-          <img src="/images/solarSystemIllustration_2.png" alt="" class="circular-mask">
+      <div class="solar-system overflow-x-hidden w-screen h-fit bg-[#95A2B4] flex max-md:flex-col relative items-center pl-[150px] max-lg:pl-[80px] max-md:p-0 pt-[3vw] min-[1200px]:pt-0 justify-between">
+        <div class="left">
+          <img src="/images/solarSystemIllustration_2.png" alt="" class="circular-mask w-full h-auto max-w-[632px] max-md:w-[60vw]">
         </div>
-        <div class="flex w-[50rem] mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem]">
-          <div class="right flex flex-col ml-[92px] max-md:ml-[50px]">
-            <h2 class="text-[#1B2532] mb-[30px] max-lg:mb-[20px] max-md:mb-[15px]">SOLAR SYSTEM</h2>
+        <div class="slide-in-right flex w-[50rem] min-[1600px]:w-8/12 max-md:w-full max-md:pr-0 max-md:pl-[10vw]">
+          <div class="right flex flex-col ml-[92px] max-md:ml-0 max-md:mt-[5vw]">
+            <h2 class="text-[#1B2532] mb-[30px] max-lg:mb-[20px] max-md:mb-[15px] ">SOLAR SYSTEM</h2>
             <div class="solar-system-info bg-[#3E536F] p-10 max-md:p-8 rounded-l-[40px]">
               <p>Prepare for a journey through the Solar System, where every planet has its own story, mysteries, and incredible natural wonders to uncover.</p>
               <a href="solar-system.html"><button class="mt-8 max-md:mt-4">BLASTOFF!</button></a>
             </div>
           </div>
         </div>
-        <img src="public/images/transition_midBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+        <!-- <img src="/images/transition_midBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0"> -->
       </div>
 
-      <div class="star-stories w-screen h-[888px] max-lg:h-[650px] max-md:h-[500px] bg-[#3E536F] flex relative items-center justify-between left-0">
-        <div class="flex justify-end w-[50rem] mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem] pr-[92px] max-md:pr-[40px]">
-          <div class="left flex flex-col">
-            <h2 class="mb-[30px] max-md:mb-[15px] text-right">STAR STORIES</h2>
+      <div class="flex relative w-screen h-fit bg-[#95A2B4] pt-[20vw] min-[1200px]:pt-[18vw]">
+          <div>
+              <img src="/images/transition_midBlue.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
+          </div>
+      </div>
+
+      <div class="star-stories overflow-x-hidden w-screen h-fit bg-[#3E536F] flex max-md:flex-col-reverse relative items-center justify-between pt-[3vw] min-[1200px]:pt-0">
+        <div class="flex justify-end w-[50rem] min-[1600px]:w-8/12 max-md:w-full pr-[92px] max-md:pr-[10vw] max-md:pl-0 max-md:pt-[5vw]">
+          <div class="slide-in-left left flex flex-col">
+            <h2 class="mb-[30px] max-md:mb-[15px] text-right max-md:text-left max-md:ml-8">STAR STORIES</h2>
             <div class="star-stories-info bg-[#D8A966] p-10 max-md:p-8 rounded-r-[40px]">
-              <p class="text-[#1B2532] text-right">Embark on an adventure among the stars, where constellations reveal both scientific wonders and the timeless legends behind their shapes.</p>
-              <div class="flex justify-end"><a href="star-stories.html"><button class="mt-8">BLASTOFF!</button></a></div>
+              <p class="text-[#1B2532] text-right max-md:text-left">Embark on an adventure among the stars, where constellations reveal both scientific wonders and the timeless legends behind their shapes.</p>
+              <div class="flex justify-end max-md:justify-start"><a href="star-stories.html"><button class="mt-8 max-md:mt-4">BLASTOFF!</button></a></div>
             </div>
           </div>
         </div>
-        <div class="right mb-[20rem] max-lg:mb-[12rem] max-md:mb-[8rem] pr-[150px] max-lg:pr-[80px] max-md:pr-[40px]">
-          <img src="public/images/starStoriesIllustration_1.png" alt="" class="circular-mask">
+        <div class="right pr-[150px] max-lg:pr-[80px] max-md:pr-0">
+          <img src="/images/starStoriesIllustration_1.png" alt="" class="circular-mask w-full h-auto max-w-[632px max-md:w-[60vw]">
         </div>
-        <img src="public/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+        <!-- <img src="/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0"> -->
+      </div>
+      <div class="flex relative w-screen h-fit bg-[#3E536F] pt-[20vw] min-[1200px]:pt-[18vw]">
+          <div>
+              <img src="/images/transition_dakrBlue.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
+          </div>
       </div>
 
-      <div class="w-screen h-[711px] max-lg:h-[500px] bg-[#1B2532]">
+      <div class="gallery-container w-screen h-fit bg-[#1B2532] pt-[3vw]">
         <h2 class="text-center mt-[0px]">STELLAR GALLERY</h2>
         <div class="image-gallery flex justify-center">
           <div class="gallery-photo flex size-fit image-swap">
-            <img src="public/images/galleryPhoto_1.png" alt="" class="default circular-mask">
-            <img src="public/images/galleryPhoto_1_hover.png" alt="" class="hover circular-mask">
+            <img src="/images/galleryPhoto_1.png" alt="" class="default circular-mask">
+            <img src="/images/galleryPhoto_1_hover.png" alt="" class="hover circular-mask">
           </div>
           <div class="gallery-photo flex size-fit image-swap">
-            <img src="public/images/galleryPhoto_2.png" alt="" class="default circular-mask">
-            <img src="public/images/galleryPhoto_2_hover.png" alt="" class="hover circular-mask">
+            <img src="/images/galleryPhoto_2.png" alt="" class="default circular-mask">
+            <img src="/images/galleryPhoto_2_hover.png" alt="" class="hover circular-mask">
           </div>
           <div class="gallery-photo flex size-fit image-swap">
-            <img src="public/images/galleryPhoto_3.png" alt="" class="default circular-mask">
-            <img src="public/images/galleryPhoto_3_hover.png" alt="" class="hover circular-mask">
+            <img src="/images/galleryPhoto_3.png" alt="" class="default circular-mask">
+            <img src="/images/galleryPhoto_3_hover.png" alt="" class="hover circular-mask">
           </div>
         </div>
         <div class="gallery-caption">
@@ -86,15 +97,17 @@
         </div>
       </div>
       
-      <div class="newsletter-frame-full relative">
-        <div class="newsletter w-screen h-[1270px] max-lg:h-[1000px] bg-[#1B2532] flex relative items-center justify-between left-0 pb-[15rem]">
-          <div class="constellations constellations-left">
-            <img src="public/images/constellationsLeft.png" alt="">
+      <div class="spacer w-screen h-[8vw] min-[1007px]:h-[80px] bg-[#1B2532]"></div>
+
+      <div class="newsletter-frame-full overflow-x-clip">
+        <div class="newsletter w-screen h-fit bg-[#1B2532] flex relative items-center justify-between left-0">
+          <div class="slide-in-left-slow constellations constellations-left">
+            <img src="/images/constellationsLeft.png" alt="">
           </div>
-          <div class="newsletter-container relative flex items-center justify-center">
-            <img src="public/images/newsletterImage.png" alt="">
-            <div class="newsletter-info w-[85%] h-[75%] @max-[920px]:w-[95%] @max-[920px]:h-auto max-md:w-[100%] max-:h-auto aspect-auto bg-[#FEEEE0] rounded-[40px] absolute
-            mt-[25rem] ml-[5rem] z-10 flex justify-center px-[2.5rem] max-md:p-[2.25rem]">
+          <div class="newsletter-container relative flex items-center justify-center mb-[10vw] max-md:mb-[2vw] h-fit">
+            <img src="/images/newsletterImage.png" alt="" class="newsletter-image max-[555px]:w-[95vw]">
+            <div class="newsletter-info slide-up w-[85%] h-[75%] max-[555px]:w-[90%] max-[555px]:h-fit aspect-auto bg-[#FEEEE0] rounded-[40px] absolute
+            max-[555px]:relative mt-[25rem] max-[800px]:mt-[40vw] max-md:mt-[35vw] max-[555px]:mt-0 ml-[5rem] max-[555px]:ml-0 z-10 flex justify-center px-[2.5rem] max-md:p-[2.25rem]">
               <div class="flex flex-col gap-[25px] max-md:gap-[10px] justify-center">
                 <h3 class="text-[#1B2532] text-center">JOIN OUR NEWSLETTER FOR THE LATEST SPACE NEWS!</h3>
                 <p class="text-[18px] text-[#1B2532] text-center">Stay up to date with our space newsletter, 
@@ -103,13 +116,18 @@
               </div>
             </div>
           </div>
-          <div class="constellations constellations-right">
-            <img src="public/images/constellationsRight.png" alt="">
+          <div class="slide-in-right-slow constellations constellations-right">
+            <img src="/images/constellationsRight.png" alt="">
           </div>
         </div>
-        <div class="footer-wave">
-          <img src="public/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
-        </div>
+        <!-- <div class="footer-wave">
+          <img src="/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+        </div> -->
+      </div>
+      <div class="flex relative w-screen h-fit bg-[#1B2532] pt-[20vw] min-[1007px]:pt-[188px] max-md:pt-[26vw] max-[555px]:pt-[16vw]">
+          <div>
+              <img src="/images/footerWave.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
+          </div>
       </div>
     </main>
 
@@ -117,9 +135,47 @@
 
     <script>
       $(function() {
-        $("#header-container").load("header.html"); // adjust path
-        $("#footer-container").load("footer.html"); // adjust path
+        $("#header-container").load("header.html");
+        $("#footer-container").load("footer.html");
       });
+      
+      const animatedElements = document.querySelectorAll('.slide-in-right, .slide-in-right-slow, .slide-in-left, .slide-in-left-slow, .slide-up');
+      const images = document.querySelectorAll('.gallery-photo .default');
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        document.body.classList.add('disable-transitions');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          document.body.classList.remove('disable-transitions');
+        }, 200);
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      const observer2 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            images.forEach((img, i) => {
+              setTimeout(() => {
+                  img.classList.add('visible');
+              }, i * 200);
+              img.classList.add('done');
+            });
+          }
+        });
+      }, { threshold: 0.5 });
+
+      animatedElements.forEach(el => observer.observe(el));
+      images.forEach(el => observer2.observe(el));
+
     </script>
 
   </body>

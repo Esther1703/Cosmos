@@ -20,21 +20,22 @@
     <header id="header-container"></header>
 
     <main class="flex flex-grow mt-4 flex-col">
-        <div class="hero bg-[url('public/images/about/galaxyBW2.png')] flex bg-cover bg-center w-screen h-[744px] bg-no-repeat relative">
+        <div class="hero bg-[url('/images/about/galaxyBW_new.png')] flex bg-cover bg-center w-screen h-[744px] max-lg:h-[544px] max-md:h-[444px] max-sm:h-[344px] bg-no-repeat relative">
             <div class="w-[60px]">
                 <h1 class="m-7 break-all">ABOUT</h1>
             </div>
-            <div class="flex flex-col absolute justify-center items-center w-screen h-full pb-36">
-                <h3 class="w-[486px] h-[128px] text-center">THE BIRTH OF COSMOS (THE COMPANY, NOT THE UNIVERSE)</h3>
+            <div class="flex flex-col absolute justify-center items-center w-screen h-full pb-28 min-[1450px]:pb-40 max-lg:pb-24 max-md:pb-[2rem] max-sm:pb-[.5rem] max-xs:pb-0 max-xs:pt-[1rem]">
+                <h3 class="hero-text w-[486px] h-[128px] max-md:w-[calc(100vh/2.5)] text-center max-w-[70vw] max-[400px]:max-w-[235px]">THE BIRTH OF COSMOS (THE COMPANY, NOT THE UNIVERSE)</h3>
             </div>
-            <img src="public/images/transition_lightBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute origin-bottom-left bottom-0">
+            <img src="/images/transition_lightBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute origin-bottom-left bottom-0">
         </div>
 
-        <div class="our-story w-screen h-[900px] bg-[#95A2B4] flex relative items-center pl-[150px]">
-            <div class="left mb-[15rem] ml-[3rem] mt-[3rem] bg-[#3E536F] px-10 py-10 rounded-l-[40px] flex flex-row items-center justify-between">
-                <div class="size-7/12 mr-10">
-                    <h2 class="mb-[30px]">OUR STORY</h2>
-                    <p>Cosmos was born out of one simple idea: learning about space shouldn’t feel like rocket science 
+        <div class="our-story overflow-x-hidden w-screen h-fit bg-[#95A2B4] flex relative items-center max-[1000px]:justify-center pl-[150px] max-[1000px]:pl-0">
+            <div class="our-story-container slide-in-right left ml-[3rem] max-[1000px]:ml-0 mt-[3vw] bg-[#3E536F] px-10 max-[1000px]:px-0 max-[1000px]:w-[calc(100vw/1.25)] 
+            py-10 rounded-l-[40px] max-[1000px]:rounded-[40px] flex flex-row items-center justify-between max-[1000px]:justify-center max-[1000px]:flex-col-reverse gap-y-8">
+                <div class="size-7/12 max-[1000px]:size-9/12 min-[1450px]:size-10/12 mr-10 max-[1000px]:mr-0">
+                    <h2 class="mb-[30px] max-md:mb-[15px]">OUR STORY</h2>
+                    <p class="max-[1200px]:text-[18px]">Cosmos was born out of one simple idea: learning about space shouldn’t feel like rocket science 
                     (even when it actually is). A handful of space-loving nerds came together [X years ago] to create 
                     a place where anyone could discover planets, stars, and galaxies in a fun, accessible way. 
                     <br><br>
@@ -42,39 +43,46 @@
                     the universe feel like your backyard. Today, our team still runs on equal parts curiosity, coffee, 
                     and stardust. And we’re just getting started—the universe is a big place, after all!</p>
                 </div>
-                <div>
-                    <img class="circular-mask" src="public/images/about/ourStoryIllustration_4.png" alt="">
+                <div class="max-[1000px]:mx-[10%]">
+                    <img class="circular-mask min-[1450px]:min-w-[500px]" src="/images/about/ourStoryIllustration_4.png" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="our-team w-screen h-[900px] bg-[#95A2B4] flex relative items-center justify-start left-0 pr-[150px]">
-            <div class="left mb-[30rem] bg-[#1B2532] px-10 py-10 rounded-r-[40px] flex items-center">
-                <div class="size-7/12 mr-10">
-                    <h2 class="mb-[30px]">OUR TEAM</h2>
-                    <p>The Cosmos team is a mix of space nerds, science buffs, storytellers, and a few people who just really love 
+        <div class="spacer w-screen h-[10vw] bg-[#95A2B4]"></div>
+
+        <div class="our-team overflow-x-hidden w-screen h-fit bg-[#95A2B4] flex relative items-center justify-start max-[1000px]:justify-center left-0 pr-[150px] max-[1000px]:pr-0">
+            <div class="our-team-container slide-in-left left bg-[#1B2532] px-10 max-[1000px]:px-0 max-[1000px]:w-[calc(100vw/1.25)] py-10 rounded-r-[40px] max-[1000px]:rounded-[40px] flex max-[1000px]:flex-col-reverse gap-y-8 items-center">
+                <div class="size-7/12 max-[1000px]:size-9/12 min-[1450px]:size-10/12 mr-10 max-[1000px]:mr-0">
+                    <h2 class="mb-[30px] max-md:mb-[15px]">OUR TEAM</h2>
+                    <p class="max-[1200px]:text-[18px]">The Cosmos team is a mix of space nerds, science buffs, storytellers, and a few people who just really love 
                         staring at the night sky. Some of us are writers, some are educators, and some are designers—but all of us 
                         share the same mission: to make the wonders of outer space fun and accessible for everyone. We’re the kind 
                         of crew that gets equally excited about the latest rocket launch, a cool new image from a space telescope, 
                         or spotting a constellation on a clear night. Together, we collaborate with plenty of curiosity and humor 
                         to bring the universe a little closer, one story (and one star) at a time.</p>
                 </div>
-                <div>
-                    <img class="circular-mask" src="public/images/about/ourTeanIllustration_1.png" alt="">
+                <div class="max-[1000px]:mx-[10%] min-[1450px]:min-w-[500px]">
+                    <img class="circular-mask" src="/images/about/ourTeanIllustration_1.png" alt="">
                 </div>
             </div>
-            <div>
-                <img src="public/images/transition_midBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
-            </div>
+            <!-- <div>
+                <img src="/images/transition_midBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div> -->
+        </div>
+        <div class="flex relative w-screen h-fit bg-[#95A2B4] pt-[22vw]">
+          <div>
+              <img src="/images/transition_midBlue.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
+          </div>
         </div>
 
-        <div class="our-goals w-screen h-[900px] bg-[#3E536F] flex flex-col relative items-center justify-center">
-            <div class="flex flex-col items-center justify-center mb-[22rem]">
-                <h2 class="mb-[30px]">OUR GOALS</h2>
-                    <div class="image-gallery">
-                        <div class="w-[318px] h-[318px] rounded-full bg-[#FEEEE0] flex flex-col items-center justify-center gap-y-[5px] goals-circles">
+        <div class="our-goals w-screen h-fit bg-[#3E536F] flex flex-col relative items-center justify-center">
+            <div class="flex flex-col items-center justify-center mb-[calc(100vw/4.5)] max-sm:mb-[calc(100vw/4.75)]">
+                <h2 class="">OUR GOALS</h2>
+                    <div class="image-gallery goals-gallery h-fit">
+                        <div class="goals-circles">
                             <span class="initial flex flex-col items-center">
-                                <img src="public/images/about/globe-stand-solid-full.png" alt="">
+                                <img src="/images/icons/globe.svg" alt="" class="goals-icon max-lg:w-[90%] max-md:w-[80%]">
                                 <h5 class="text-[#1B2532]">LEARN</h5>
                             </span>
                             <span class="on-hover">
@@ -82,9 +90,9 @@
                                 <p class="text-[#1B2532] text-center px-5">Teaching the history and science of space</p>
                             </span>
                         </div>
-                        <div class="w-[318px] h-[318px] rounded-full bg-[#FEEEE0] flex flex-col items-center justify-center gap-y-[5px] goals-circles">
+                        <div class="goals-circles">
                             <span class="initial flex flex-col items-center">
-                                <img src="public/images/about/rocket-launch-solid-full.png" alt="">
+                                <img src="/images/icons/rocket_dark.svg" alt="" class="goals-icon max-lg:w-[60%] max-md:w-[50%]">
                                 <h5 class="text-[#1B2532]">EXPLORE</h5>
                             </span>
                             <span class="on-hover">
@@ -92,9 +100,9 @@
                                 <p class="text-[#1B2532] text-center px-5">Making the wonders of outer space accessible</p>
                             </span>
                         </div>
-                        <div class="w-[318px] h-[318px] rounded-full bg-[#FEEEE0] flex flex-col items-center justify-center gap-y-[5px] goals-circles">
+                        <div class="goals-circles">
                             <span class="initial flex flex-col items-center">
-                                <img src="public/images/about/lightbulb-on-solid-full.png" alt="">
+                                <img src="/images/icons/lightbulb.svg" alt="" class="goals-icon max-lg:w-[59%] max-md:w-[49%]">
                                 <h5 class="text-[#1B2532]">INSPIRE</h5>
                             </span>
                             <span class="on-hover">
@@ -105,18 +113,24 @@
                     </div>  
             </div>
             
-            <div>
-                <img src="public/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
-            </div>
+            <!-- <div>
+                <img src="/images/transition_dakrBlue.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+            </div> -->
         </div>
 
-        <div class="contact-form-container w-screen h-[1135px] bg-[#1B2532] flex flex-col relative items-center justify-center">
-            <h2 class="mb-[3rem]">LET'S CONNECT!</h2>
-            <form action="" class="contact-form flex flex-col gap-6 p-[5rem] bg-[#3E536F] bg-opacity-50 h-fit w-7/12 rounded-[40px] justify-center">
+        <div class="flex relative w-screen h-fit bg-[#3E536F]">
+          <div>
+              <img src="/images/transition_dakrBlue.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
+          </div>
+        </div>
+
+        <div class="contact-form-container w-screen h-fit bg-[#1B2532] flex flex-col relative items-center justify-center max-sm:pt-[3vw]">
+            <h2 class="mb-[3rem] max-lg:mb-[4vw]">LET'S CONNECT!</h2>
+            <form action="" class="contact-form flex flex-col gap-[1vw] p-[calc(100vw/20)] bg-[#3E536F] bg-opacity-50 h-fit w-7/12 max-[1150px]:w-9/12 rounded-[40px] justify-center">
                 <div>
                     <h5 class="text-center pb-[0.8rem]">Enjoyed your visit to COSMOS? Leave us a message!</h5>
                 </div>
-                <div class="name-and-email grid grid-cols-2 gap-5">
+                <div class="name-and-email grid grid-cols-2 max-[800px]:grid-cols-1 gap-5 max-[800px]:gap-2">
                     <div class="full-name-container flex flex-col gap-2">
                         <label for="full-name">Full Name</label>
                         <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
@@ -134,35 +148,42 @@
                     <label for="message-input">Message</label>
                     <textarea name="message-input" id="message-input" placeholder="Share your thoughts here" class="h-[15rem]"></textarea>
                 </div>
-                <button type="submit" class="w-fit">SUBMIT</button>
+                <button type="submit" class="w-fit mt-2">SUBMIT</button>
             </form>
         </div>
 
-        <div class="newsletter-frame-full relative">
-            <div class="newsletter w-screen h-[1270px] bg-[#1B2532] flex relative items-center justify-between left-0 pb-[15rem]">
-                <div class="constellations constellations-left">
-                    <img src="public/images/constellationsLeft.png" alt="">
-                </div>
-                <div class="newsletter-container relative flex items-center justify-center">
-                    <img src="public/images/newsletterImage.png" alt="">
-                    <div class="newsletter-info w-[85%] h-[75%] aspect-auto bg-[#FEEEE0] rounded-[40px] absolute
-                    mt-[25rem] ml-[5rem] z-10 flex justify-center pl-[2.5rem] pr-[2.5rem]">
-                    <div class="flex flex-col gap-[25px] justify-center">
-                        <h3 class="text-[#1B2532] text-center">JOIN OUR NEWSLETTER FOR THE LATEST SPACE NEWS!</h3>
-                        <p class="text-[18px] text-[#1B2532] text-center">Stay up to date with our space newsletter, 
-                        bringing you the latest discoveries, missions, and cosmic wonders from across the universe.</p>
-                        <button class="size-fit self-center border-[#EEDDC3]">SIGN UP</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="constellations constellations-right">
-                    <img src="public/images/constellationsRight.png" alt="">
-                </div>
+        <div class="spacer w-screen h-[8vw] min-[1007px]:h-[80px] bg-[#1B2532]"></div>
+
+      <div class="newsletter-frame-full overflow-x-clip">
+        <div class="newsletter w-screen h-fit bg-[#1B2532] flex relative items-center justify-between left-0">
+          <div class="constellations constellations-left slide-in-left-slow">
+            <img src="/images/constellationsLeft.png" alt="">
+          </div>
+          <div class="newsletter-container relative flex items-center justify-center mb-[10vw] max-md:mb-[2vw] h-fit">
+            <img src="/images/newsletterImage.png" alt="" class="newsletter-image max-[555px]:w-[95vw]">
+            <div class="newsletter-info slide-up w-[85%] h-[75%] max-[555px]:w-[90%] max-[555px]:h-fit aspect-auto bg-[#FEEEE0] rounded-[40px] absolute
+            max-[555px]:relative mt-[25rem] max-[800px]:mt-[40vw] max-md:mt-[35vw] max-[555px]:mt-0 ml-[5rem] max-[555px]:ml-0 z-10 flex justify-center px-[2.5rem] max-md:p-[2.25rem]">
+              <div class="flex flex-col gap-[25px] max-md:gap-[10px] justify-center">
+                <h3 class="text-[#1B2532] text-center">JOIN OUR NEWSLETTER FOR THE LATEST SPACE NEWS!</h3>
+                <p class="text-[18px] text-[#1B2532] text-center">Stay up to date with our space newsletter, 
+                bringing you the latest discoveries, missions, and cosmic wonders from across the universe.</p>
+                <button class="size-fit self-center border-[#EEDDC3]">SIGN UP</button>
+              </div>
             </div>
-            <div class="footer-wave">
-            <img src="public/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
-            </div>
+          </div>
+          <div class="constellations constellations-right slide-in-right-slow">
+            <img src="/images/constellationsRight.png" alt="">
+          </div>
         </div>
+        <!-- <div class="footer-wave">
+          <img src="/images/footerWave.png" alt="" class="transition-vector flex w-screen h-[188px] absolute bottom-0 left-0 right-0">
+        </div> -->
+      </div>
+      <div class="flex relative w-screen h-fit bg-[#1B2532] pt-[20vw] min-[1007px]:pt-[188px] max-md:pt-[26vw] max-[555px]:pt-[16vw]">
+          <div>
+              <img src="/images/footerWave.png" alt="" class="transition-vector w-screen h-[10vw] absolute bottom-0 left-0 right-0">
+          </div>
+      </div>
 
     </main>
     
@@ -173,6 +194,45 @@
         $("#header-container").load("header-2.html"); // adjust path
         $("#footer-container").load("footer.html"); // adjust path
       });
+
+      const animatedElements = document.querySelectorAll('.slide-in-right, .slide-in-right-slow, .slide-in-left, .slide-in-left-slow, .slide-up');
+      const circles = document.querySelectorAll('.goals-circles');
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        document.body.classList.add('disable-transitions');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          document.body.classList.remove('disable-transitions');
+        }, 200);
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      const observer2 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            circles.forEach((div, i) => {
+              div.classList.remove('done');
+              setTimeout(() => {
+                  div.classList.add('visible');
+              }, i * 200);
+              div.classList.add('done');
+            });
+          }
+        });
+      }, { threshold: 0.5 });
+
+      animatedElements.forEach(el => observer.observe(el));
+      circles.forEach(el => observer2.observe(el));
+
     </script>
 
 </body>
