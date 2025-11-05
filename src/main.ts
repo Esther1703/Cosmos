@@ -14,6 +14,7 @@ const lightbox = new PhotoSwipeLightbox({
   hideAnimationDuration: 0,
   pswpModule: () => import('photoswipe'),
 
+  preloadFirstSlide: false,
   zoom: false,
 });
 lightbox.init();
