@@ -94,8 +94,10 @@
                         <div class="swiper-slide" data-planet="sun">
                             <div class="gap-[17px] flex flex-col justify-center items-center mb-[17px]">
                                 <div class="image-swap planet-image">
-                                    <a href="/sun.html"><img class="default" src="/images/solarSystem/Sun.svg" alt=""></a>
-                                    <a href="/sun.html"><img class="hover" src="/images/solarSystem/planet_hovers/Sun_hover.svg" alt=""></a>
+                                    <a href="/sun.html">
+                                        <img class="default" src="/images/solarSystem/Sun.svg" alt="">
+                                        <img class="hover" src="/images/solarSystem/planet_hovers/Sun_hover.svg" alt="">
+                                    </a>
                                 </div>
                                 <img src="/images/solarSystem/Sun_line.svg" alt="">
                             </div>
@@ -274,15 +276,6 @@
 
       const images = document.querySelectorAll('.gallery-photo .default');
       const animatedElements = document.querySelectorAll('.slide-in-right, .slide-in-right-slow, .slide-in-left, .slide-in-left-slow, .slide-up');
-
-      window.addEventListener('load', () => {
-        const video = document.querySelector('.circular-mask');
-        if (video) {
-            video.play().catch(err => {
-            console.log('Autoplay prevented:', err);
-            });
-        }
-        });
 
       const swiper = new Swiper('.swiper', {
         loop: true,
