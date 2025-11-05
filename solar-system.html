@@ -275,6 +275,15 @@
       const images = document.querySelectorAll('.gallery-photo .default');
       const animatedElements = document.querySelectorAll('.slide-in-right, .slide-in-right-slow, .slide-in-left, .slide-in-left-slow, .slide-up');
 
+      window.addEventListener('load', () => {
+        const video = document.querySelector('.circular-mask');
+        if (video) {
+            video.play().catch(err => {
+            console.log('Autoplay prevented:', err);
+            });
+        }
+        });
+
       const swiper = new Swiper('.swiper', {
         loop: true,
         // default values
